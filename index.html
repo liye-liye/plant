@@ -1,454 +1,449 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>植物识别应用原型</title>
+  <title>Plant ID Assistant - Page Set</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen bg-slate-100 text-slate-800">
-  <div class="max-w-[390px] mx-auto bg-slate-50 min-h-screen flex flex-col">
-    <!-- 顶部标题区 -->
-    <header class="px-4 pt-6 pb-4">
-      <div class="flex items-center justify-between">
-        <div>
-          <h1 class="text-2xl font-semibold text-emerald-600">植物识别助手</h1>
-          <p class="text-xs text-slate-500 mt-1">随身的植物管家</p>
-        </div>
-        <span class="px-3 py-1 text-xs rounded-full bg-emerald-100 text-emerald-600">同步中</span>
+<body class="bg-slate-100 text-slate-800 space-y-10 py-10">
+  <!-- Home -->
+  <section class="max-w-[390px] mx-auto bg-slate-50 rounded-[32px] shadow-sm border border-emerald-100 px-4 pt-6 pb-6 space-y-6">
+    <header class="flex items-center justify-between">
+      <div>
+        <h1 class="text-2xl font-semibold text-emerald-600">Plant ID Assistant</h1>
+        <p class="text-xs text-slate-500 mt-1">Always synced with your greenery</p>
       </div>
+      <span class="px-3 py-1 text-xs rounded-full bg-emerald-100 text-emerald-600">Syncing</span>
     </header>
-
-    <!-- 主体内容 -->
-    <main class="flex-1 overflow-y-auto px-4 pb-24">
-      <!-- 首页 -->
-      <section id="home" class="space-y-6">
-        <!-- 气候卡片 -->
-        <div class="bg-white rounded-3xl shadow-sm border border-emerald-100 p-5 space-y-4">
-          <div class="flex items-start justify-between">
-          <div>
-            <h2 class="text-xl font-semibold text-slate-700">上海 · 徐汇区</h2>
-          </div>
-            <div class="text-4xl">☀️</div>
-          </div>
-        <div class="flex items-center justify-between text-sm bg-emerald-50/60 rounded-2xl px-4 py-3">
-          <div>
-            <p class="text-slate-400">温度</p>
-            <p class="text-lg font-semibold text-emerald-600 mt-1">26°C</p>
-          </div>
-          <div>
-            <p class="text-slate-400">空气湿度</p>
-            <p class="text-lg font-semibold text-emerald-600 mt-1">58%</p>
-          </div>
-          <div>
-            <p class="text-slate-400">降雨概率</p>
-            <p class="text-lg font-semibold text-emerald-600 mt-1">20%</p>
-          </div>
-        </div>
-        </div>
-
-        <!-- 快捷入口卡片 -->
-        <div class="grid grid-cols-2 gap-3">
-          <div class="bg-white rounded-3xl shadow-sm border border-emerald-100 p-4 flex flex-col items-center gap-3">
-            <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">📷</div>
-            <div class="text-center space-y-1">
-              <h3 class="text-sm font-semibold text-slate-700">识别</h3>
-              <p class="text-xs text-slate-500">拍照快速识别植物信息</p>
-            </div>
-            <button class="px-4 py-2 text-xs font-medium rounded-full bg-emerald-500 text-white shadow-sm">开始识别</button>
-          </div>
-
-          <div class="bg-white rounded-3xl shadow-sm border border-emerald-100 p-4 flex flex-col items-center gap-3">
-            <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">🩺</div>
-            <div class="text-center space-y-1">
-              <h3 class="text-sm font-semibold text-slate-700">诊断</h3>
-              <p class="text-xs text-slate-500">根据症状获取护理方案</p>
-            </div>
-            <button class="px-4 py-2 text-xs font-medium rounded-full bg-emerald-100 text-emerald-700 border border-emerald-200">开始诊断</button>
-          </div>
-        </div>
-
-        <!-- 最近识别历史（已移除） -->
-
-        <!-- 本月养护技巧 -->
-        <div class="space-y-3">
-          <h3 class="text-lg font-semibold text-slate-700">本月养护技巧</h3>
-          <div class="flex gap-3 overflow-x-auto pb-1">
-            <div class="min-w-[160px] bg-white rounded-2xl border border-emerald-100 shadow-sm p-4 space-y-2">
-              <div class="text-xl">💧</div>
-              <h4 class="text-sm font-semibold text-slate-700">浇水节奏</h4>
-              <p class="text-xs text-slate-500">保持土壤微湿，避免积水</p>
-            </div>
-            <div class="min-w-[160px] bg-white rounded-2xl border border-emerald-100 shadow-sm p-4 space-y-2">
-              <div class="text-xl">☀️</div>
-              <h4 class="text-sm font-semibold text-slate-700">光照建议</h4>
-              <p class="text-xs text-slate-500">早晚散射光最佳</p>
-            </div>
-            <div class="min-w-[160px] bg-white rounded-2xl border border-emerald-100 shadow-sm p-4 space-y-2">
-              <div class="text-xl">🛎</div>
-              <h4 class="text-sm font-semibold text-slate-700">本月常见问题</h4>
-              <p class="text-xs text-slate-500">注意叶片黄化与虫害</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 为你推荐 -->
-        <div class="space-y-3">
-          <h3 class="text-lg font-semibold text-slate-700">为你推荐</h3>
-          <div class="grid grid-cols-2 gap-3">
-            <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-3">
-              <div class="h-28 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">🌱</div>
-              <div>
-                <p class="text-sm font-semibold text-slate-700">绿萝</p>
-                <span class="inline-flex px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600 mt-2">新手友好</span>
-              </div>
-            </div>
-            <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-3">
-              <div class="h-28 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">🌼</div>
-              <div>
-                <p class="text-sm font-semibold text-slate-700">虎尾兰</p>
-                <span class="inline-flex px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600 mt-2">办公室耐阴</span>
-              </div>
-            </div>
-            <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-3">
-              <div class="h-28 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">🌸</div>
-              <div>
-                <p class="text-sm font-semibold text-slate-700">白鹤芋</p>
-                <span class="inline-flex px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600 mt-2">宠物友好</span>
-              </div>
-            </div>
-            <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-3">
-              <div class="h-28 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">🌿</div>
-              <div>
-                <p class="text-sm font-semibold text-slate-700">常春藤</p>
-                <span class="inline-flex px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600 mt-2">净化空气</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 诊断 -->
-      <section id="diagnosis" class="space-y-6 hidden">
+    <div class="bg-white rounded-3xl shadow-sm border border-emerald-100 p-5 space-y-4">
+      <div class="flex items-start justify-between">
+        <h2 class="text-xl font-semibold text-slate-700">Shanghai · Xuhui</h2>
+        <span class="text-4xl">☀️</span>
+      </div>
+      <div class="flex items-center justify-between text-sm bg-emerald-50/60 rounded-2xl px-4 py-3">
         <div>
-          <h2 class="text-xl font-semibold text-emerald-600">诊断</h2>
-          <p class="text-xs text-slate-500 mt-1">拍照或按症状快速诊断植物问题</p>
+          <p class="text-slate-400">Temperature</p>
+          <p class="text-lg font-semibold text-emerald-600 mt-1">26°C</p>
         </div>
-
-        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-5 space-y-4">
-          <h3 class="text-lg font-semibold text-slate-700">快速诊断植物问题</h3>
-          <p class="text-xs text-slate-500">智能识别症状并给出解决方案</p>
-          <button class="w-full px-4 py-3 text-sm font-medium rounded-2xl bg-emerald-500 text-white shadow-sm">开始诊断</button>
+        <div>
+          <p class="text-slate-400">Humidity</p>
+          <p class="text-lg font-semibold text-emerald-600 mt-1">58%</p>
         </div>
-
-        <div class="space-y-3">
-          <div class="flex items-center justify-between">
-            <h3 class="text-lg font-semibold text-slate-700">常见疾病</h3>
-            <span class="text-xs text-emerald-600">查看更多 →</span>
-          </div>
-          <div class="grid grid-cols-3 gap-3">
-            <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-3 space-y-3 text-center">
-              <div class="h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🍃</div>
-              <p class="text-xs font-semibold text-slate-700">白粉病</p>
-            </div>
-            <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-3 space-y-3 text-center">
-              <div class="h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🍂</div>
-              <p class="text-xs font-semibold text-slate-700">灰霉病</p>
-            </div>
-            <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-3 space-y-3 text-center">
-              <div class="h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🌱</div>
-              <p class="text-xs font-semibold text-slate-700">根腐病</p>
-            </div>
-          </div>
+        <div>
+          <p class="text-slate-400">Rain Chance</p>
+          <p class="text-lg font-semibold text-emerald-600 mt-1">20%</p>
         </div>
-
-        <div class="bg-emerald-50 border border-emerald-100 rounded-3xl p-4 text-center text-xs text-emerald-700">
-          解锁更多诊断方案和专家建议
-        </div>
-      </section>
-
-      <!-- 相机 -->
-      <section id="camera" class="space-y-6 hidden">
-        <div class="flex items-center justify-between">
-          <h2 class="text-xl font-semibold text-emerald-600">拍照识别</h2>
-          <span class="text-xs text-slate-400">快速识别</span>
-        </div>
-        <button id="cameraButton" class="w-full px-4 py-4 text-base font-semibold rounded-3xl bg-emerald-500 text-white shadow-md">
-          开始拍照
-        </button>
-      </section>
-
-      <!-- 我的植物 -->
-      <section id="my-plants" class="space-y-6 hidden">
-        <div class="flex items-center justify-between">
-          <h2 class="text-xl font-semibold text-emerald-600">我的植物</h2>
-          <button class="px-3 py-1 text-xs font-medium rounded-full bg-emerald-100 text-emerald-600 border border-emerald-200">添加植物</button>
-        </div>
-
-        <div class="space-y-4">
-          <article class="plant-card bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-3 cursor-pointer">
-            <div class="flex items-center gap-4">
-              <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🪴</div>
-              <div class="flex-1 space-y-1">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <p class="text-sm font-semibold text-slate-700">发财树</p>
-                    <p class="text-[11px] text-slate-400 mt-0.5">Pachira aquatica</p>
-                  </div>
-                  <span class="px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600">客厅</span>
-                </div>
-                <div class="flex items-center justify-between text-[11px] text-slate-500">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                    <span>状态：良好</span>
-                  </div>
-                  <span class="text-emerald-600">下次浇水：明天</span>
-                </div>
-              </div>
-            </div>
-            <div class="plant-note hidden text-[11px] text-slate-500 bg-emerald-50 border border-emerald-100 rounded-2xl px-3 py-3">
-              最近记录：叶片茂盛，已更换土壤，注意通风。
-            </div>
-          </article>
-
-          <article class="plant-card bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-3 cursor-pointer">
-            <div class="flex items-center gap-4">
-              <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🌿</div>
-              <div class="flex-1 space-y-1">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <p class="text-sm font-semibold text-slate-700">绿萝</p>
-                    <p class="text-[11px] text-slate-400 mt-0.5">Epipremnum aureum</p>
-                  </div>
-                  <span class="px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600">阳台</span>
-                </div>
-                <div class="flex items-center justify-between text-[11px] text-slate-500">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
-                    <span>状态：需注意</span>
-                  </div>
-                  <span class="text-emerald-600">下次浇水：2 天后</span>
-                </div>
-              </div>
-            </div>
-            <div class="plant-note hidden text-[11px] text-slate-500 bg-yellow-50 border border-yellow-100 rounded-2xl px-3 py-3">
-              最近记录：叶片略微发黄，建议减少直射光照。
-            </div>
-          </article>
-
-          <article class="plant-card bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-3 cursor-pointer">
-            <div class="flex items-center gap-4">
-              <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🌵</div>
-              <div class="flex-1 space-y-1">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <p class="text-sm font-semibold text-slate-700">仙人掌</p>
-                    <p class="text-[11px] text-slate-400 mt-0.5">Cactaceae</p>
-                  </div>
-                  <span class="px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600">书房</span>
-                </div>
-                <div class="flex items-center justify-between text-[11px] text-slate-500">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                    <span>状态：危险</span>
-                  </div>
-                  <span class="text-emerald-600">下次浇水：今天</span>
-                </div>
-              </div>
-            </div>
-            <div class="plant-note hidden text-[11px] text-slate-500 bg-red-50 border border-red-100 rounded-2xl px-3 py-3">
-              最近记录：土壤过干，建议立即补水并调整光照。
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- 护理日程 -->
-      <section id="schedule" class="space-y-6 hidden">
-        <div class="flex items-center justify-between">
-          <h2 class="text-xl font-semibold text-emerald-600">护理日程</h2>
-          <span class="text-xs text-slate-400">日程提醒</span>
-        </div>
-
-        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4">
-          <div class="flex justify-between items-center text-xs">
-            <div class="flex flex-col items-center gap-1 text-slate-400">
-              <span class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100">11</span>
-              <span>周一</span>
-            </div>
-            <div class="flex flex-col items-center gap-1 text-slate-400">
-              <span class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100">12</span>
-              <span>周二</span>
-            </div>
-            <div class="flex flex-col items-center gap-1 text-white">
-              <span class="w-8 h-8 flex items-center justify-center rounded-full bg-emerald-500">13</span>
-              <span class="text-emerald-600">今天</span>
-            </div>
-            <div class="flex flex-col items-center gap-1 text-slate-400">
-              <span class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100">14</span>
-              <span>周四</span>
-            </div>
-            <div class="flex flex-col items-center gap-1 text-slate-400">
-              <span class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100">15</span>
-              <span>周五</span>
-            </div>
-            <div class="flex flex-col items-center gap-1 text-slate-400">
-              <span class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100">16</span>
-              <span>周六</span>
-            </div>
-            <div class="flex flex-col items-center gap-1 text-slate-400">
-              <span class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100">17</span>
-              <span>周日</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="space-y-5">
-          <div class="space-y-3">
-            <h3 class="text-sm font-semibold text-emerald-600">💧 浇水</h3>
-            <div class="space-y-3">
-              <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center gap-3">
-                <div class="text-xl">💧</div>
-                <div class="flex-1 text-xs">
-                  <p class="text-slate-700 font-semibold">给发财树浇水</p>
-                  <p class="text-slate-400 mt-1">上午 · 客厅</p>
-                </div>
-                <button class="px-3 py-1 text-[11px] rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">完成</button>
-              </div>
-              <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center gap-3">
-                <div class="text-xl">💧</div>
-                <div class="flex-1 text-xs">
-                  <p class="text-slate-700 font-semibold">检查多肉土壤湿度</p>
-                  <p class="text-slate-400 mt-1">下午 · 阳台</p>
-                </div>
-                <button class="px-3 py-1 text-[11px] rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">完成</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="space-y-3">
-            <h3 class="text-sm font-semibold text-emerald-600">🌿 修剪</h3>
-            <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center gap-3">
-              <div class="text-xl">🌿</div>
-              <div class="flex-1 text-xs">
-                <p class="text-slate-700 font-semibold">修剪绿萝枯叶</p>
-                <p class="text-slate-400 mt-1">下午 · 阳台</p>
-              </div>
-              <button class="px-3 py-1 text-[11px] rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">完成</button>
-            </div>
-          </div>
-
-          <div class="space-y-3">
-            <h3 class="text-sm font-semibold text-emerald-600">🌸 施肥</h3>
-            <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center gap-3">
-              <div class="text-xl">🌸</div>
-              <div class="flex-1 text-xs">
-                <p class="text-slate-700 font-semibold">给白鹤芋施肥</p>
-                <p class="text-slate-400 mt-1">晚上 · 卧室</p>
-              </div>
-              <button class="px-3 py-1 text-[11px] rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">完成</button>
-            </div>
-          </div>
-
-          <div class="space-y-3">
-            <h3 class="text-sm font-semibold text-emerald-600">🪴 换盆</h3>
-            <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center gap-3">
-              <div class="text-xl">🪴</div>
-              <div class="flex-1 text-xs">
-                <p class="text-slate-700 font-semibold">准备虎尾兰换盆</p>
-                <p class="text-slate-400 mt-1">周末 · 客厅</p>
-              </div>
-              <button class="px-3 py-1 text-[11px] rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">完成</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center justify-between">
-          <div>
-            <p class="text-sm font-semibold text-slate-700">推送提醒</p>
-            <p class="text-[11px] text-slate-400 mt-1">按时完成护理任务</p>
-          </div>
-          <div class="relative w-12 h-6 rounded-full bg-emerald-500">
-            <span class="absolute right-1 top-1 w-4 h-4 rounded-full bg-white shadow"></span>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <!-- 底部 TabBar -->
-  <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-lg">
-    <div class="max-w-[390px] mx-auto flex">
-      <button class="tab-btn flex-1 flex flex-col items-center justify-center py-2 text-emerald-600 font-semibold" data-tab="home">
-        <span class="text-xl">🌱</span>
-        <span class="text-xs mt-1">首页</span>
-        <span class="mt-1 w-8 h-1 rounded-full bg-emerald-500"></span>
-      </button>
-      <button class="tab-btn flex-1 flex flex-col items-center justify-center py-2 text-slate-400" data-tab="diagnosis">
-        <span class="text-xl">🩺</span>
-        <span class="text-xs mt-1">诊断</span>
-        <span class="mt-1 w-8 h-1 rounded-full bg-transparent"></span>
-      </button>
-      <button class="tab-btn flex-1 flex flex-col items-center justify-center py-2 text-slate-400" data-tab="camera">
-        <span class="text-xl">📷</span>
-        <span class="text-xs mt-1">相机</span>
-        <span class="mt-1 w-8 h-1 rounded-full bg-transparent"></span>
-      </button>
-      <button class="tab-btn flex-1 flex flex-col items-center justify-center py-2 text-slate-400" data-tab="my-plants">
-        <span class="text-xl">🪴</span>
-        <span class="text-xs mt-1">我的植物</span>
-        <span class="mt-1 w-8 h-1 rounded-full bg-transparent"></span>
-      </button>
-      <button class="tab-btn flex-1 flex flex-col items-center justify-center py-2 text-slate-400" data-tab="schedule">
-        <span class="text-xl">📆</span>
-        <span class="text-xs mt-1">日程</span>
-        <span class="mt-1 w-8 h-1 rounded-full bg-transparent"></span>
-      </button>
+      </div>
     </div>
-  </nav>
+    <div class="grid grid-cols-2 gap-3">
+      <div class="bg-white rounded-3xl shadow-sm border border-emerald-100 p-4 flex flex-col items-center gap-3">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">📷</div>
+        <div class="text-center space-y-1">
+          <h3 class="text-sm font-semibold text-slate-700">Identify</h3>
+          <p class="text-xs text-slate-500">Snap to recognize plant info</p>
+        </div>
+        <button class="px-4 py-2 text-xs font-medium rounded-full bg-emerald-500 text-white shadow-sm">Start Identifying</button>
+      </div>
+      <div class="bg-white rounded-3xl shadow-sm border border-emerald-100 p-4 flex flex-col items-center gap-3">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">🩺</div>
+        <div class="text-center space-y-1">
+          <h3 class="text-sm font-semibold text-slate-700">Diagnose</h3>
+          <p class="text-xs text-slate-500">Get care advice by symptoms</p>
+        </div>
+        <button class="px-4 py-2 text-xs font-medium rounded-full bg-emerald-100 text-emerald-700 border border-emerald-200">Start Diagnosis</button>
+      </div>
+    </div>
+    <div class="space-y-3">
+      <h3 class="text-lg font-semibold text-slate-700">Monthly Care Tips</h3>
+      <div class="flex gap-3 overflow-x-auto pb-1">
+        <div class="min-w-[160px] bg-white rounded-2xl border border-emerald-100 shadow-sm p-4 space-y-2">
+          <span class="text-xl">💧</span>
+          <h4 class="text-sm font-semibold text-slate-700">Watering Rhythm</h4>
+          <p class="text-xs text-slate-500">Keep soil moist, avoid puddles</p>
+        </div>
+        <div class="min-w-[160px] bg-white rounded-2xl border border-emerald-100 shadow-sm p-4 space-y-2">
+          <span class="text-xl">☀️</span>
+          <h4 class="text-sm font-semibold text-slate-700">Light Advice</h4>
+          <p class="text-xs text-slate-500">Morning and evening diffuse light</p>
+        </div>
+        <div class="min-w-[160px] bg-white rounded-2xl border border-emerald-100 shadow-sm p-4 space-y-2">
+          <span class="text-xl">🛎</span>
+          <h4 class="text-sm font-semibold text-slate-700">Common Issues</h4>
+          <p class="text-xs text-slate-500">Watch leaves for yellowing/pests</p>
+        </div>
+      </div>
+    </div>
+    <div class="space-y-3">
+      <h3 class="text-lg font-semibold text-slate-700">Recommended for You</h3>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-3">
+          <div class="h-28 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">🌱</div>
+          <div>
+            <p class="text-sm font-semibold text-slate-700">Golden Pothos</p>
+            <span class="inline-flex px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600 mt-2">Beginner Friendly</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-3">
+          <div class="h-28 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">🌼</div>
+          <div>
+            <p class="text-sm font-semibold text-slate-700">Snake Plant</p>
+            <span class="inline-flex px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600 mt-2">Office Shade</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-3">
+          <div class="h-28 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">🌸</div>
+          <div>
+            <p class="text-sm font-semibold text-slate-700">Peace Lily</p>
+            <span class="inline-flex px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600 mt-2">Pet Friendly</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-3">
+          <div class="h-28 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">🌿</div>
+          <div>
+            <p class="text-sm font-semibold text-slate-700">English Ivy</p>
+            <span class="inline-flex px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600 mt-2">Air Purifier</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="border border-slate-200 rounded-3xl bg-white shadow-sm px-4 py-3">
+      <nav class="flex items-center justify-between text-[11px] text-slate-400">
+        <div class="flex flex-col items-center text-emerald-600 font-semibold">
+          <span class="text-xl">🌱</span>
+          <span class="mt-1">Home</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🩺</span>
+          <span class="mt-1">Diagnosis</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">📷</span>
+          <span class="mt-1">Camera</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🪴</span>
+          <span class="mt-1">My Plants</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">📆</span>
+          <span class="mt-1">Schedule</span>
+        </div>
+      </nav>
+    </footer>
+  </section>
 
-  <script>
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const sections = document.querySelectorAll('main section');
-    const activateTab = (targetId) => {
-      sections.forEach(section => {
-        section.id === targetId ? section.classList.remove('hidden') : section.classList.add('hidden');
-      });
-      tabButtons.forEach(btn => {
-        const indicator = btn.querySelector('span:nth-child(3)');
-        if (btn.dataset.tab === targetId) {
-          btn.classList.add('text-emerald-600', 'font-semibold');
-          btn.classList.remove('text-slate-400', 'font-normal');
-          indicator.classList.replace('bg-transparent', 'bg-emerald-500');
-        } else {
-          btn.classList.remove('text-emerald-600', 'font-semibold');
-          btn.classList.add('text-slate-400', 'font-normal');
-          indicator.classList.replace('bg-emerald-500', 'bg-transparent');
-        }
-      });
-    };
+  <!-- Diagnosis -->
+  <section class="max-w-[390px] mx-auto bg-slate-50 rounded-[32px] shadow-sm border border-emerald-100 px-4 pt-6 pb-6 space-y-6">
+    <header class="flex items-center justify-between">
+      <div>
+        <h1 class="text-2xl font-semibold text-emerald-600">Plant Diagnosis Guide</h1>
+        <p class="text-xs text-slate-500 mt-1">Photo or symptom-based troubleshooting</p>
+      </div>
+      <span class="px-3 py-1 text-xs rounded-full bg-emerald-100 text-emerald-600">Experts Online</span>
+    </header>
+    <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-5 space-y-3">
+      <h2 class="text-lg font-semibold text-slate-700">Diagnose Issues Fast</h2>
+      <p class="text-xs text-slate-500">Upload a photo or describe symptoms to get instant guidance.</p>
+      <button class="w-full px-4 py-3 text-sm font-medium rounded-2xl bg-emerald-500 text-white shadow-sm">Start Diagnosis</button>
+    </div>
+    <div class="space-y-3">
+      <div class="flex items-center justify-between">
+        <h3 class="text-lg font-semibold text-slate-700">Common Diseases</h3>
+        <span class="text-xs text-emerald-600">View More →</span>
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-3 space-y-3 text-center">
+          <div class="h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🍃</div>
+          <p class="text-xs font-semibold text-slate-700">Powdery Mildew</p>
+        </div>
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-3 space-y-3 text-center">
+          <div class="h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🍂</div>
+          <p class="text-xs font-semibold text-slate-700">Gray Mold</p>
+        </div>
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-3 space-y-3 text-center">
+          <div class="h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🌱</div>
+          <p class="text-xs font-semibold text-slate-700">Root Rot</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-emerald-50 border border-emerald-100 rounded-3xl p-4 text-center text-xs text-emerald-700">
+      Unlock personalized treatment plans and expert advice
+    </div>
+    <footer class="border border-slate-200 rounded-3xl bg-white shadow-sm px-4 py-3">
+      <nav class="flex items-center justify-between text-[11px] text-slate-400">
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🌱</span>
+          <span class="mt-1">Home</span>
+        </div>
+        <div class="flex flex-col items-center text-emerald-600 font-semibold">
+          <span class="text-xl">🩺</span>
+          <span class="mt-1">Diagnosis</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">📷</span>
+          <span class="mt-1">Camera</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🪴</span>
+          <span class="mt-1">My Plants</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">📆</span>
+          <span class="mt-1">Schedule</span>
+        </div>
+      </nav>
+    </footer>
+  </section>
 
-    tabButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const target = button.dataset.tab;
-        if (target) activateTab(target);
-      });
-    });
+  <!-- Camera -->
+  <section class="max-w-[390px] mx-auto bg-slate-50 rounded-[32px] shadow-sm border border-emerald-100 px-4 pt-6 pb-6 space-y-6">
+    <header class="flex items-center justify-between">
+      <div>
+        <h1 class="text-2xl font-semibold text-emerald-600">Camera Recognition</h1>
+        <p class="text-xs text-slate-500 mt-1">Stable lighting yields better matches</p>
+      </div>
+      <span class="px-3 py-1 text-xs rounded-full bg-emerald-100 text-emerald-600">Ready</span>
+    </header>
+    <div class="border-2 border-dashed border-emerald-200 rounded-3xl bg-white/80 h-60 flex items-center justify-center text-slate-400 text-sm">
+      Camera preview placeholder
+    </div>
+    <button class="w-full px-4 py-4 text-base font-semibold rounded-3xl bg-emerald-500 text-white shadow-md">Begin Shooting</button>
+    <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 space-y-2">
+      <h3 class="text-sm font-semibold text-slate-700">Capture Tips</h3>
+      <ul class="text-xs text-slate-500 space-y-1 list-disc list-inside">
+        <li>Ensure the plant is the focus</li>
+        <li>Keep about 30 cm distance</li>
+        <li>Avoid backlight and glare</li>
+      </ul>
+    </div>
+    <footer class="border border-slate-200 rounded-3xl bg-white shadow-sm px-4 py-3">
+      <nav class="flex items-center justify-between text-[11px] text-slate-400">
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🌱</span>
+          <span class="mt-1">Home</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🩺</span>
+          <span class="mt-1">Diagnosis</span>
+        </div>
+        <div class="flex flex-col items-center text-emerald-600 font-semibold">
+          <span class="text-xl">📷</span>
+          <span class="mt-1">Camera</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🪴</span>
+          <span class="mt-1">My Plants</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">📆</span>
+          <span class="mt-1">Schedule</span>
+        </div>
+      </nav>
+    </footer>
+  </section>
 
-    const plantCards = document.querySelectorAll('.plant-card');
-    plantCards.forEach(card => {
-      card.addEventListener('click', () => {
-        const note = card.querySelector('.plant-note');
-        note.classList.toggle('hidden');
-      });
-    });
+  <!-- My Plants -->
+  <section class="max-w-[390px] mx-auto bg-slate-50 rounded-[32px] shadow-sm border border-emerald-100 px-4 pt-6 pb-6 space-y-6">
+    <header class="flex items-center justify-between">
+      <div>
+        <h1 class="text-2xl font-semibold text-emerald-600">My Plants</h1>
+        <p class="text-xs text-slate-500 mt-1">Track every growing friend</p>
+      </div>
+      <button class="px-3 py-1 text-xs font-medium rounded-full bg-emerald-100 text-emerald-600 border border-emerald-200">Add Plant</button>
+    </header>
+    <div class="space-y-3">
+      <article class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 flex items-center gap-4">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🪴</div>
+        <div class="flex-1 space-y-2 text-xs text-slate-500">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm font-semibold text-slate-700">Money Tree</p>
+              <p class="text-[11px] text-slate-400">Pachira aquatica</p>
+            </div>
+            <span class="px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600">Living Room</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              <span>Status: Healthy</span>
+            </div>
+            <span class="text-emerald-600">Next watering: Tomorrow</span>
+          </div>
+        </div>
+      </article>
+      <article class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 flex items-center gap-4">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🌿</div>
+        <div class="flex-1 space-y-2 text-xs text-slate-500">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm font-semibold text-slate-700">Pothos</p>
+              <p class="text-[11px] text-slate-400">Epipremnum aureum</p>
+            </div>
+            <span class="px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600">Balcony</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+              <span>Status: Needs Attention</span>
+            </div>
+            <span class="text-emerald-600">Next watering: In 2 days</span>
+          </div>
+        </div>
+      </article>
+      <article class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4 flex items-center gap-4">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">🌵</div>
+        <div class="flex-1 space-y-2 text-xs text-slate-500">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm font-semibold text-slate-700">Cactus</p>
+              <p class="text-[11px] text-slate-400">Cactaceae</p>
+            </div>
+            <span class="px-2 py-1 text-[10px] rounded-full bg-emerald-50 text-emerald-600">Study</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+              <span>Status: Critical</span>
+            </div>
+            <span class="text-emerald-600">Next watering: Today</span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <footer class="border border-slate-200 rounded-3xl bg-white shadow-sm px-4 py-3">
+      <nav class="flex items-center justify-between text-[11px] text-slate-400">
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🌱</span>
+          <span class="mt-1">Home</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🩺</span>
+          <span class="mt-1">Diagnosis</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">📷</span>
+          <span class="mt-1">Camera</span>
+        </div>
+        <div class="flex flex-col items-center text-emerald-600 font-semibold">
+          <span class="text-xl">🪴</span>
+          <span class="mt-1">My Plants</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">📆</span>
+          <span class="mt-1">Schedule</span>
+        </div>
+      </nav>
+    </footer>
+  </section>
 
-    const cameraButton = document.getElementById('cameraButton');
-    if (cameraButton) {
-      cameraButton.addEventListener('click', () => {
-        alert('进入拍照页');
-      });
-    }
-  </script>
+  <!-- Care Schedule -->
+  <section class="max-w-[390px] mx-auto bg-slate-50 rounded-[32px] shadow-sm border border-emerald-100 px-4 pt-6 pb-6 space-y-6">
+    <header class="flex items-center justify-between">
+      <div>
+        <h1 class="text-2xl font-semibold text-emerald-600">Care Schedule</h1>
+        <p class="text-xs text-slate-500 mt-1">Plan tasks to keep plants thriving</p>
+      </div>
+      <span class="px-3 py-1 text-xs rounded-full bg-emerald-100 text-emerald-600">Reminders On</span>
+    </header>
+    <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm p-4">
+      <div class="flex items-center justify-between text-xs text-slate-400">
+        <div class="flex flex-col items-center"><span class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">Mon</span><span class="mt-1">11</span></div>
+        <div class="flex flex-col items-center"><span class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">Tue</span><span class="mt-1">12</span></div>
+        <div class="flex flex-col items-center text-emerald-600 font-semibold"><span class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center">Wed</span><span class="mt-1">13</span></div>
+        <div class="flex flex-col items-center"><span class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">Thu</span><span class="mt-1">14</span></div>
+        <div class="flex flex-col items-center"><span class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">Fri</span><span class="mt-1">15</span></div>
+        <div class="flex flex-col items-center"><span class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">Sat</span><span class="mt-1">16</span></div>
+        <div class="flex flex-col items-center"><span class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">Sun</span><span class="mt-1">17</span></div>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <div class="space-y-3">
+        <h3 class="text-sm font-semibold text-emerald-600">💧 Watering</h3>
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center gap-3">
+          <div class="text-xl">💧</div>
+          <div class="flex-1 text-xs text-slate-600">
+            <p class="font-semibold text-slate-700">Water the Money Tree</p>
+            <p class="text-slate-400 mt-1">Morning · Living Room</p>
+          </div>
+          <button class="px-3 py-1 text-[11px] rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">Done</button>
+        </div>
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center gap-3">
+          <div class="text-xl">💧</div>
+          <div class="flex-1 text-xs text-slate-600">
+            <p class="font-semibold text-slate-700">Check succulent soil moisture</p>
+            <p class="text-slate-400 mt-1">Afternoon · Balcony</p>
+          </div>
+          <button class="px-3 py-1 text-[11px] rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">Done</button>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <h3 class="text-sm font-semibold text-emerald-600">🌿 Pruning</h3>
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center gap-3">
+          <div class="text-xl">🌿</div>
+          <div class="flex-1 text-xs text-slate-600">
+            <p class="font-semibold text-slate-700">Trim yellow pothos leaves</p>
+            <p class="text-slate-400 mt-1">Afternoon · Balcony</p>
+          </div>
+          <button class="px-3 py-1 text-[11px] rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">Done</button>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <h3 class="text-sm font-semibold text-emerald-600">🌸 Fertilizing</h3>
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center gap-3">
+          <div class="text-xl">🌸</div>
+          <div class="flex-1 text-xs text-slate-600">
+            <p class="font-semibold text-slate-700">Feed the Peace Lily</p>
+            <p class="text-slate-400 mt-1">Evening · Bedroom</p>
+          </div>
+          <button class="px-3 py-1 text-[11px] rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">Done</button>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <h3 class="text-sm font-semibold text-emerald-600">🪴 Repotting</h3>
+        <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center gap-3">
+          <div class="text-xl">🪴</div>
+          <div class="flex-1 text-xs text-slate-600">
+            <p class="font-semibold text-slate-700">Prepare snake plant repot</p>
+            <p class="text-slate-400 mt-1">Weekend · Living Room</p>
+          </div>
+          <button class="px-3 py-1 text-[11px] rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">Done</button>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white rounded-3xl border border-emerald-100 shadow-sm px-4 py-3 flex items-center justify-between">
+      <div>
+        <p class="text-sm font-semibold text-slate-700">Push Notifications</p>
+        <p class="text-[11px] text-slate-400 mt-1">Stay informed about upcoming tasks</p>
+      </div>
+      <div class="relative w-12 h-6 rounded-full bg-emerald-500">
+        <span class="absolute right-1 top-1 w-4 h-4 rounded-full bg-white shadow"></span>
+      </div>
+    </div>
+    <footer class="border border-slate-200 rounded-3xl bg-white shadow-sm px-4 py-3">
+      <nav class="flex items-center justify-between text-[11px] text-slate-400">
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🌱</span>
+          <span class="mt-1">Home</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🩺</span>
+          <span class="mt-1">Diagnosis</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">📷</span>
+          <span class="mt-1">Camera</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xl">🪴</span>
+          <span class="mt-1">My Plants</span>
+        </div>
+        <div class="flex flex-col items-center text-emerald-600 font-semibold">
+          <span class="text-xl">📆</span>
+          <span class="mt-1">Schedule</span>
+        </div>
+      </nav>
+    </footer>
+  </section>
 </body>
 </html>
